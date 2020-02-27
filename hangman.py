@@ -2,7 +2,7 @@ from __future__ import print_function
  
 lives = 6
 word = ""
-updatedSpaces = ['_','_','_','_','_','_','_']
+updatedSpaces = []
 letter = ""
   
 def initialize():
