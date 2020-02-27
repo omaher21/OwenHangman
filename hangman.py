@@ -5,12 +5,22 @@ word = ""
 updatedSpaces = []
 letter = ""
   
+def initialize():
+    global word
+    word = "earring"
+    global updatedSpaces
+    print(updatedSpaces)
+
+def getLetter():
+    print('Guess a letter.')
+    letter = raw_input()
+    global letter
+    
 def check():
    ''' find the index of the word and replace it with the correct index from the list'''
    global word
    global updatedSpaces
    global lives
-   lives = 6
    if letter in word:
       i = (word.find(letter))
       del (updatedSpaces[i])
@@ -37,6 +47,18 @@ def check():
        won()
    if word in word:
        won()
+def won():
+    if letter in word:
+        print('Yay, you won!!') 
+    if letter not in word:
+        print(getLetter)      
+        
+          
+                         
+def main():
+    initialize()
+    getLetter()                
+
 
 main()
  
